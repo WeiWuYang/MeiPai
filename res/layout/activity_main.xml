@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <VideoView
+        android:id="@+id/vv_MeiPai"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center" />
+
+    <RadioGroup
+        android:id="@+id/rg_meipai"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_ly"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:text="旅游" />
+
+        <RadioButton
+            android:id="@+id/rb_star"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明星" />
+
+        <RadioButton
+            android:id="@+id/rb_gx"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:text="搞笑" />
+    </RadioGroup>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/srl"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    >
+    
+    <GridView
+        android:id="@+id/lv_meipai"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="#00000000"
+        android:numColumns="2" >
+    </GridView>
+</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
